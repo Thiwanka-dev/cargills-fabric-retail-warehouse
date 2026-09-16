@@ -844,13 +844,4 @@ BSc (Hons) Information Technology --- Data Science
 ✓ 100M rows/day scaling considerations
 ```
 
-------------------------------------------------------------------------
 
-```{=html}
-<p align="center">
-```
-`<strong>`{=html}Microsoft Fabric • Data Engineering • Data Quality •
-Security • Analytics`</strong>`{=html}
-```{=html}
-</p>
-```
