@@ -1,24 +1,6 @@
 # Cargills Retail Analytics --- Microsoft Fabric
 
-```{=html}
-<p align="center">
-```
-`<strong>`{=html}End-to-End Retail Data Engineering & Analytics
-Solution`</strong>`{=html}`<br>`{=html} Microsoft Fabric • PySpark •
-Delta Lake • SQL RLS • Power BI
-```{=html}
-</p>
-```
-```{=html}
-<p align="center">
-```
-`<img src="https://img.shields.io/badge/Microsoft%20Fabric-Data%20Engineering-blue" alt="Microsoft Fabric">`{=html}
-`<img src="https://img.shields.io/badge/PySpark-ETL-orange" alt="PySpark">`{=html}
-`<img src="https://img.shields.io/badge/Delta%20Lake-Storage-00ADD8" alt="Delta Lake">`{=html}
-`<img src="https://img.shields.io/badge/Power%20BI-Analytics-yellow" alt="Power BI">`{=html}
-```{=html}
-</p>
-```
+
 ## 📌 Overview
 
 This project implements an end-to-end retail analytics platform using
@@ -801,21 +783,6 @@ High-level setup:
 
 ------------------------------------------------------------------------
 
-# 🔒 Public Repository Security Checklist
-
-Before publishing, verify:
-
--   [ ] No passwords
--   [ ] No API keys
--   [ ] No access tokens
--   [ ] No client secrets
--   [ ] No private connection strings
--   [ ] No workspace credentials
--   [ ] No customer PII
--   [ ] No personal authentication details
--   [ ] No private assessment credentials
-
-Use placeholders for sensitive configuration.
 
 ------------------------------------------------------------------------
 
@@ -836,18 +803,7 @@ implementation explainable and defensible during technical discussion.
 
 ------------------------------------------------------------------------
 
-# 📚 Documentation
 
-Additional project documentation includes:
-
--   **Architecture & Design Decisions** --- detailed architecture,
-    trade-offs, business key, validation, security and scaling.
--   **One-Page Architecture Summary** --- concise assessment-focused
-    design overview.
--   **Implementation Notebooks** --- Bronze, Silver and Gold processing.
--   **Power BI Report** --- analytical reporting.
--   **Screenshots / Demo Evidence** --- successful, failed and security
-    scenarios.
 
 ------------------------------------------------------------------------
 
