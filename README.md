@@ -1,105 +1,229 @@
 
+f078a1b4-33a2-42a5-8f40-b22877665583.png
+I just finished the assignment, but I am a little bit late from the submission. I want to tell you I had a power cut, so that's why I'm a little late. Sorry for that. I am waiting for this opportunity. I put a lot of hard work into this assignment. Hope, kind of email.
+
+Yep — “submitting” is the correct spelling. ✅
+
+❌ subbmiting
+
+❌ submmiting
+
+✅ submitting
+
+So your subject could be:
+
+Assessment Submission – Intern Data Engineer
+
+
+Today 7:51 PM
+So I'm going to upload this project to GitHub. So I need full detailed, good-looking README file. So when I publish it publicly, I want to see README looking good kind of thing and add all the details necessary.
+
+Yesss bro 🔥 — for a public GitHub repository, the README should look like a real portfolio/data-engineering project, not just an assessment submission.
+
+I created a full, polished README for your Cargills Microsoft Fabric project covering:
+
+🏗️ Architecture diagram
+
+🔄 End-to-end pipeline flow
+
+🥉 Bronze / 🥈 Silver / 🥇 Gold design
+
+🔑 Business key and why row_id
+
+♻️ Incremental processing & corrections
+
+🔁 Idempotency
+
+🧪 Data-quality rules and Batch 3 failure scenario
+
+🚨 Failure handling & email notification
+
+🔐 PII protection
+
+🛡️ SQL data-layer RLS
+
+📊 Power BI pages
+
+📋 Audit/observability
+
+⚖️ PySpark vs Dataflows Gen2
+
+⚖️ DirectQuery vs Direct Lake/Import
+
+📈 100M rows/day scaling considerations
+
+🧪 Demo scenarios
+
+🔎 Validation SQL
+
+📸 Evidence/screenshot structure
+
+🚀 Reproduction/setup guide
+
+🔒 Public GitHub security checklist
+
+🤖 AI disclosure
+
+👨‍💻 Your profile/skills
+
+Project highlights
+
+📄 Download the README
+Download Cargills_Retail_Analytics_README.md
+
+One important thing before you push 🚨
+Because you're making this public, check your repository for:
+
+❌ passwords
+❌ tokens
+❌ connection secrets
+❌ workspace credentials
+❌ private email addresses
+❌ customer PII
+❌ anything that can authenticate into Fabric
+Also, I intentionally made the README describe the architecture and implementation without exposing private authentication/configuration details.
+
+Once you put this into GitHub, the README should look very strong as a Data Engineering portfolio project, not merely as an internship assessment. 🚀 
+
 
 Cargills_Retail_Analytics_README.md
+Document
 
 
-Cargills Retail Analytics --- Microsoft Fabric Data Engineering Assessment
-End-to-end retail data engineering solution built with Microsoft
-Fabric, PySpark, Delta Lake, SQL Row-Level Security, and Power BI.
+d1148b59-4b80-4e6a-8565-afe5fa00e12b.png
+it look like trash when i copy pasete tht 
+
+😂 Yeah bro, I see exactly what happened. The ASCII box architecture was the problem — GitHub interprets all those | characters badly when the formatting gets copied, so it turns into a giant mess.
+
+I rebuilt it specifically for GitHub rendering:
+
+✅ Proper Markdown spacing
+
+✅ Mermaid architecture diagram instead of ASCII boxes
+
+✅ Clean tables
+
+✅ Proper code blocks
+
+✅ GitHub-friendly repository tree
+
+✅ Better section hierarchy
+
+✅ Badges at the top
+
+✅ Cleaner visual presentation
+
+✅ Same detailed technical content
+
+📄 Use this one instead
+Download the GitHub-ready README.md
+
+⚠️ Important
+Don't copy the README from my previous message.
+
+Download this new file, put it in the root of your GitHub repository, and name it exactly:
+
+README.md
+GitHub should then render the architecture as an actual diagram:
+
+GitHub CSV → Pipeline → Bronze → Silver → Gold → SQL RLS → Power BI
+
+instead of that horrible wall of characters 😂.
+
+And honestly, this version is much more suitable for your portfolio because someone opening your repo immediately sees what the project does, the architecture, technologies, engineering decisions, security, DQ, scaling, and demo evidence. 
+
+
+Cargills_Retail_Analytics_README_GitHub.md
+Document
 
 
 
-📌 Project Overview
-This project implements a production-oriented retail analytics
-foundation on Microsoft Fabric for processing periodic transactional
-sales CSV batches arriving from a public web source.
+Cargills_Retail_Analytics_README_GitHub.md
 
-The solution addresses four core requirements:
 
-Reliable batch ingestion without manual file downloads/uploads
+Cargills Retail Analytics --- Microsoft Fabric
+<p align="center">
+<strong>{=html}End-to-End Retail Data Engineering & Analytics
+Solution</strong>{=html}<br>{=html} Microsoft Fabric • PySpark •
+Delta Lake • SQL RLS • Power BI
 
-Incremental and repeatable processing with duplicate prevention and
-correction handling
+</p>
+<p align="center">
+<img src="https://img.shields.io/badge/Microsoft%20Fabric-Data%20Engineering-blue" alt="Microsoft Fabric">{=html}
+<img src="https://img.shields.io/badge/PySpark-ETL-orange" alt="PySpark">{=html}
+<img src="https://img.shields.io/badge/Delta%20Lake-Storage-00ADD8" alt="Delta Lake">{=html}
+<img src="https://img.shields.io/badge/Power%20BI-Analytics-yellow" alt="Power BI">{=html}
 
-Automated data-quality validation before data reaches reporting
+</p>
+📌 Overview
+This project implements an end-to-end retail analytics platform using
+Microsoft Fabric.
 
-Data-layer security so regional users only access permitted sales
-data
+Transactional sales data arrives as periodic CSV batches from a public
+web source. The solution ingests each batch automatically, validates and
+cleans the data, handles duplicates and corrections, protects customer
+information, and publishes secured regional analytics through Power BI.
 
-The solution follows a Bronze → Silver → Gold architecture and
-exposes the secured Gold layer to Power BI for regional sales and
-profitability analysis.
+Core objectives
+Reliable HTTP-based batch ingestion
+
+Parameterized and repeatable processing
+
+Duplicate prevention and correction handling
+
+Automated schema and record-level data-quality validation
+
+Rejected-record quarantine and audit logging
+
+Bronze → Silver → Gold architecture
+
+SQL data-layer Row-Level Security (RLS)
+
+Power BI regional sales and profitability reporting
+
+Failure branching and email notification
 
 🏗️ Architecture
-Public GitHub CSV Source
-          │
-          │ HTTP
-          ▼
-┌────────────────────────────┐
-│ Microsoft Fabric Pipeline  │
-│ pl_Cargills_Master         │
-└─────────────┬──────────────┘
-              │
-              ▼
-┌────────────────────────────┐
-│ Bronze                     │
-│ Raw records + metadata     │
-│ bronze_sales               │
-└─────────────┬──────────────┘
-              │
-              ▼
-┌────────────────────────────┐
-│ Silver                     │
-│ Schema + DQ + Dedup        │
-│ Current-state processing   │
-└─────────────┬──────────────┘
-              │
-       ┌──────┴─────────┐
-       │                │
-       ▼                ▼
-Rejected records    Processing logs
-       │
-       ▼
-┌────────────────────────────┐
-│ Gold                       │
-│ Fact + Dimensions          │
-└─────────────┬──────────────┘
-              │
-              ▼
-┌────────────────────────────┐
-│ SQL Analytics Endpoint     │
-│ Data-layer RLS             │
-└─────────────┬──────────────┘
-              │
-              ▼
-┌────────────────────────────┐
-│ Power BI                   │
-│ Regional Retail Analytics  │
-└────────────────────────────┘
-Master pipeline
-Copy_Batch_To_Bronze
-        │
-        ▼
-NB_Bronze_Ingestion
-        │
-        ▼
-NB_Silver_Processing
-        │
-        ├── Success ──► NB_Gold_Transformation
-        │
-        └── Failure ──► Notify_Validation_Failure
+flowchart TD
+    A[Public GitHub CSV Batches] --> B[Copy_Batch_To_Bronze]
+    B --> C[NB_Bronze_Ingestion]
+    C --> D[NB_Silver_Processing]
+
+    D -->|Validation PASS| E[NB_Gold_Transformation]
+    D -->|Validation FAIL| F[Notify Validation Failure]
+
+    D --> G[(silver_sales_rejected)]
+    D --> H[(silver_processing_log)]
+
+    C --> I[(bronze_sales)]
+    E --> J[(Gold Star Schema)]
+
+    J --> K[SQL Analytics Endpoint]
+    K --> L[SQL Data-Layer RLS]
+    L --> M[Power BI]
+Processing flow
+Source CSV
+    ↓
+HTTP Copy
+    ↓
+Bronze
+    ↓
+Silver Validation
+    ├── FAIL → Rejected Records + Log + Email
+    │
+    └── PASS → Current Silver → Gold → SQL RLS → Power BI
 🧰 Technology Stack
 Technology Purpose
 
 Microsoft Fabric End-to-end data engineering platform
 Fabric Data Pipeline Batch orchestration
 Fabric Lakehouse Layered Delta storage
-PySpark Transformation, validation, deduplication and MERGE
+PySpark Validation, transformation, deduplication and MERGE
 Delta Lake ACID storage and current-state processing
-SQL Analytics Endpoint Analytical access and security boundary
+SQL Analytics Endpoint Analytical serving and security boundary
 SQL Row-Level Security Regional data access control
-Power BI Business reporting
-GitHub Source control and documentation
+Power BI Business analytics and visualization
+GitHub Version control and documentation
 
 📂 Repository Structure
 Cargills-Retail-Analytics/
@@ -137,59 +261,69 @@ Cargills-Retail-Analytics/
 │   └── Cargills_DE_Architecture_and_Design_Decisions.docx
 │
 └── README.md
-Public repository: never commit passwords, tokens, secrets,
-private connection strings, workspace credentials, or real customer
-PII. Replace assessment-specific identities with safe placeholders
-where necessary.
+Public repository: do not commit passwords, access tokens, private
+connection strings, workspace credentials, or customer PII.
 
-🔄 Data Flow
-Each source CSV is treated as a separate arriving batch.
+🔄 Pipeline Design
+The master pipeline is:
 
-The master pipeline uses the parameter:
+Copy_Batch_To_Bronze
+        │
+        ▼
+NB_Bronze_Ingestion
+        │
+        ▼
+NB_Silver_Processing
+        │
+        ├──────── Success ────────► NB_Gold_Transformation
+        │
+        └──────── Failure ────────► Notify_Validation_Failure
+The pipeline uses a parameter named:
 
 batch_file_name
-Example values:
+Example:
 
 batch_01_history.csv
 batch_02_incremental.csv
 batch_03_incremental.csv
-The filename is passed dynamically to the HTTP Copy Activity rather than
-hardcoded into the pipeline.
-
-This allows the same orchestration to process different batches without
-modifying the pipeline definition.
+The same pipeline can therefore process different batches without
+changing the pipeline definition.
 
 🥉 Bronze Layer
 Table
 bronze_sales
-Bronze preserves the incoming source records and adds ingestion
+
+The Bronze layer preserves incoming source records and adds technical
 metadata:
 
 source_file_name
+
 load_run_id
+
 ingestion_timestamp
-Batch identity vs execution identity
-source_file_name = logical batch identity
-load_run_id      = pipeline execution identity
-This distinction makes processing traceable across repeated executions.
 
-The CSV reader explicitly handles quoted and escaped fields so values
-containing commas, such as product names, are parsed correctly.
+Batch identity
+source_file_name → logical batch identity
+load_run_id      → pipeline execution identity
+This makes every ingestion traceable.
 
-Idempotent batch ingestion
-Bronze processing replaces the existing stored copy for the same source
-batch rather than appending another copy of the batch.
+Idempotent ingestion
+The Bronze implementation uses the source batch identity to replace the
+stored copy for that batch instead of blindly appending another copy.
+
+The CSV reader also explicitly handles quoted and escaped fields so
+values containing commas are parsed correctly.
 
 🥈 Silver Layer
 Silver is responsible for:
 
 Schema validation
 
-Data type standardization
+Data-type standardization
 
-Record-level data-quality validation
+Record-level validation
 
-Rejection/quarantine of invalid records
+Rejected-record quarantine
 
 Duplicate detection
 
@@ -204,50 +338,52 @@ The selected business key is:
 
 row_id
 Why row_id?
-The supplied data was profiled before implementation.
+The supplied assessment batches were profiled before implementation.
 
 Batch 1 contains unique Row IDs.
 
 Batch 2 contains corrected versions of existing Row IDs.
 
-Row ID therefore provides a stable record-level identifier across
-the supplied batches.
+order_id is not unique because one order can contain multiple
+products.
 
-order_id was not selected because one order can contain multiple
-products and therefore does not uniquely identify an individual sales
-record.
+row_id therefore provides the appropriate record-level matching
+key for this dataset.
 
 ♻️ Incremental Processing & Corrections
-The Silver current-state table is maintained using row_id as the
-matching key.
+The current Silver state is maintained using row_id as the MERGE key.
 
-Incoming Row ID
-       │
-       ├── New ──────────────► INSERT
-       │
-       └── Existing ─────────► UPDATE
-For example:
+Incoming row_id
+      │
+      ├── New key      → INSERT
+      │
+      └── Existing key → UPDATE
+Example:
 
-Batch 1: row_id=12345, sales=100
-Batch 2: row_id=12345, sales=120
-The current-state Silver record becomes:
+Batch 1
+row_id = 12345
+sales  = 100
 
-row_id=12345, sales=120
-This handles later corrections without creating duplicate current-state
-records.
+Batch 2
+row_id = 12345
+sales  = 120
+Current state:
+
+row_id = 12345
+sales  = 120
+This allows corrected records from later batches to replace stale
+current-state values without creating duplicate records.
 
 🧪 Data Quality
-Validation occurs before data is promoted to Gold.
+Validation is performed before data is promoted to the reporting layer.
 
 Schema validation
-Structural changes such as unexpected or missing columns cause the batch
-to fail.
+Unexpected or missing source columns cause the batch to fail.
 
-This prevents unexpected source changes from silently entering
-reporting.
+This protects downstream processing from unexpected structural changes.
 
 Record-level validation
-The implemented assessment rules identify issues including:
+The implemented rules identify issues including:
 
 Missing Row ID
 Missing Order ID
@@ -258,49 +394,57 @@ Sales <= 0
 Invalid records are stored in:
 
 silver_sales_rejected
-Each rejection retains its reason so data-quality problems can be
-investigated.
+
+Each rejected record retains its rejection reason.
+
+Validation policy
+Issue Handling
+
+Unexpected/missing schema columns Stop batch
+Missing critical record value Reject record
+Invalid Sales value Reject record
+Duplicate Row ID Deduplicate
+Valid new Row ID Insert
+Existing Row ID with correction Update
 
 The Sales <= 0 rule was selected after profiling the supplied
-assessment batches. In a production system, the source contract would
-determine whether negative sales are legitimate business events such
-as returns.
+assessment data. In a production environment, the source business
+contract would determine whether negative sales represent legitimate
+events such as returns.
 
-🚨 Batch Failure Protection
-A failed validation must not partially update reporting.
+🚨 Failure Protection
+A failed batch must not partially update the reporting layer.
 
-The processing flow is:
+flowchart LR
+    A[Incoming Batch] --> B[Schema Validation]
+    B -->|FAIL| C[Log Failure]
+    C --> D[Rejected Records]
+    C --> E[Failure Email]
+    B -->|PASS| F[Record-Level DQ]
+    F --> G[Deduplicate]
+    G --> H[MERGE Current Silver]
+    H --> I[Gold Transformation]
+For the Batch 3 demonstration:
 
-Incoming Batch
-      │
-      ▼
-Schema Validation
-      │
-      ├── FAIL ──► Log failure
-      │             │
-      │             └──► Send notification
-      │
-      └── PASS ──► DQ + Dedup
-                    │
-                    ▼
-                 MERGE Silver
-                    │
-                    ▼
-                 Gold update
-When Batch 3 fails schema validation:
+Copy succeeds
 
-rejected records are captured
+Bronze ingestion succeeds
 
-the Silver processing log records the failure
+Silver validation fails
 
-the failure branch sends an alert
+Rejected records are captured
+
+Silver processing log records the failure
+
+Failure email is sent
 
 Gold transformation is not executed
 
-the reporting layer remains on the last known good state
+Reporting remains on the last known good state
 
-📊 Observed Batch Profiling
-The supplied files were profiled before implementation.
+📊 Batch Profiling
+The supplied files were profiled before the pipeline rules were
+finalized.
 
 Batch Physical Rows Key Findings
 
@@ -312,60 +456,61 @@ records
 
 Batch 3 included:
 
-an additional order_channel column
+An additional order_channel column
 
-missing Order IDs
+Missing Order IDs
 
-missing Customer IDs
+Missing Customer IDs
 
-missing Regions
+Missing Regions
 
-missing Sales
+Missing Sales
 
-negative Sales values
+Negative Sales values
 
-duplicate Row IDs
+Duplicate Row IDs
 
 This batch was used to demonstrate the validation-failure path.
 
 🥇 Gold Layer
-Fact
+The Gold layer provides an analytical star-schema model.
+
+Fact table
 gold_sales_fact
+
 Fact grain
 One current sales record per row_id.
 
 Dimensions
 gold_dim_date
+
 gold_dim_product
+
 gold_dim_region
-The Gold layer follows a star-schema approach for analytical reporting.
 
-The fact contains business measures such as:
-
-sales
-quantity
-discount
-profit
-and analytical attributes such as date, product and geography.
+The fact contains measures and analytical attributes required for retail
+reporting, including sales, quantity, discount, profit, date, product
+and geography.
 
 A deterministic geo_key represents the Region + State + City
-combination for dimensional modelling. It is a modelling key, not the
-security rule itself.
+combination for dimensional modelling.
+
+geo_key is a modelling key. It is separate from the security mapping
+used for RLS.
 
 🔐 Data Privacy
-The source contains customer-related information, including:
+The source contains customer-related information such as:
 
 Customer names
 
 Postal codes
 
-These are treated as personal data.
+These fields are treated as personal data.
 
-The reporting Gold model does not expose customer names or postal codes
-because regional sales analysis does not require identifying customer
-details.
+They are not exposed in the Gold reporting model because regional sales
+analysis does not require identifying customer details.
 
-This follows a least-exposure principle: sensitive attributes are not
+This follows a least-exposure approach: sensitive information is not
 propagated into reporting unless required.
 
 🛡️ Row-Level Security
@@ -374,34 +519,31 @@ Regional access is enforced at the SQL data layer.
 The mapping table is:
 
 security_user_region
-Conceptually:
 
 User
-  │
-  ▼
+  ↓
 security_user_region
-  │
-  ▼
+  ↓
 Permitted Region
-  │
-  ▼
+  ↓
 SQL Row-Level Security
-  │
-  ▼
+  ↓
 gold_sales_fact
-The security policy filters sales rows according to the authenticated
-user's mapped region.
-
+  ↓
+Power BI
 Why data-layer RLS?
-The assessment requires regional restrictions to be enforced at the data
+The assessment requires regional security to be enforced at the data
 layer rather than relying only on Power BI report roles.
 
 Power BI connects to the secured SQL Analytics Endpoint, so the
-reporting layer inherits the underlying data restriction.
+underlying data restriction applies to the reporting path as well.
+
+The same security boundary can also be demonstrated through direct SQL
+access.
 
 📈 Power BI
-Power BI connects to the Gold layer through the Fabric SQL Analytics
-Endpoint.
+The Power BI report connects to the Gold layer through the Fabric SQL
+Analytics Endpoint.
 
 Page 1 --- Sales Overview
 Includes:
@@ -434,174 +576,156 @@ Category/product breakdown
 Regional performance metrics
 
 Page 3 --- Regional Comparison
-Provides regional comparison when the appropriate security mapping is
+Provides regional comparison where the appropriate access mapping is
 available.
 
-Security and metric correctness are prioritized over visual
-complexity.
+Correctness and security are prioritized over visual complexity.
 
 📋 Audit & Observability
 Bronze log
 bronze_ingestion_log
+
 Tracks:
 
 run_id
+
 batch_file_name
+
 ingestion_start_time
+
 ingestion_end_time
+
 status
+
 rows_received
+
 rows_written
+
 failure_reason
+
 Silver log
 silver_processing_log
+
 Tracks:
 
 run_id
+
 batch_file_name
+
 processing_start_time
+
 processing_end_time
+
 status
+
 rows_received
+
 rows_passed
+
 rows_rejected
+
 rows_after_deduplication
+
 rows_written
+
 failure_reason
-These logs provide execution-level traceability and support failure
-investigation.
+
+This provides execution-level traceability and supports investigation of
+failed batches.
 
 🔁 Idempotency
-The pipeline is designed so rerunning the same batch does not create
-duplicate current-state records.
+The pipeline is designed to be safely rerunnable.
 
-The key invariant is:
+For current-state sales data:
 
 COUNT(*) = COUNT(DISTINCT row_id)
-for the current-state sales dataset.
+A repeated batch is matched against the existing business keys rather
+than blindly appended.
 
-A repeated Batch 2 execution therefore updates/matches the same business
-keys instead of creating another copy.
+Therefore, rerunning Batch 2 should not create duplicate current-state
+records.
 
 🚨 Failure Notification
-The master pipeline contains a failure branch:
+The failure branch is:
 
 NB_Silver_Processing
-       │
-       ├── Success ──► NB_Gold_Transformation
-       │
-       └── Failure ──► Notify_Validation_Failure
+        │
+        ├── Success → NB_Gold_Transformation
+        │
+        └── Failure → Notify_Validation_Failure
 The notification communicates that the incoming batch failed validation
-and that Gold/reporting was not executed.
+and that Gold/reporting processing was not executed.
 
-This provides operational visibility in addition to the pipeline run
-history and processing logs.
+This provides operational visibility through both pipeline history and
+the notification channel.
 
-⚖️ Key Design Decisions
-Decision Selected Approach Rationale
-
-Architecture Bronze → Silver → Gold Clear separation of
-raw, validated and
-analytical data
-
-Processing PySpark Flexible DQ,
-deduplication and Delta
-MERGE
-
-Storage Delta tables ACID and reliable
-current-state
-processing
-
-Business key row_id Stable record-level
-identifier in supplied
-data
-
-Duplicate handling Row ID deduplication Prevent duplicate
-current-state records
-
-Corrections Delta MERGE Later batches replace
-stale records
-
-Schema failures Stop batch Protect downstream
-reporting
-
-Bad records Quarantine Preserve rejected rows
-and reasons
-
-Sensitive fields Exclude from reporting Minimize exposure
-Gold
-
-Security SQL data-layer RLS Security is not
-dependent only on Power
-BI
-
-Reporting Power BI Business-facing
-analytics
-
-⚖️ Technology Trade-offs
+⚖️ Design Trade-offs
 PySpark vs Dataflows Gen2
-PySpark was selected because the assessment requires explicit
-control over:
+Selected: PySpark
+PySpark provides direct control over:
 
-record-level validation
+Data-quality rules
 
-duplicate handling
+Duplicate detection
+
+Deduplication
 
 Delta MERGE
 
-current-state management
+Current-state processing
 
-schema checks
+Schema validation
 
-repeatable processing
-
-Dataflows Gen2 would be a reasonable choice for lower-code
-transformation scenarios, but PySpark provides more direct control over
-this stateful processing pattern.
+Dataflows Gen2 would be suitable for many lower-code transformation
+workloads, but PySpark was selected here because the assessment requires
+explicit stateful processing and validation logic.
 
 DirectQuery vs Direct Lake / Import
 The report uses the secured SQL Analytics Endpoint.
 
-This design makes the SQL data-layer security boundary explicit and
-demonstrable, including direct SQL access.
+This makes the SQL security boundary explicit and allows the assessment
+requirement for data-layer RLS and direct SQL security to be
+demonstrated.
 
-Direct Lake or Import could provide different performance
-characteristics, but the selected serving approach aligns with the
-assessment's requirement to enforce regional security at the data layer.
+Direct Lake or Import could offer different Power BI performance
+characteristics, but the selected design prioritizes the required
+security architecture.
 
 📈 Scaling to 100M Rows/Day
 For a workload approaching 100 million rows per day, the architecture
 would require additional performance engineering.
 
 Storage
-Partition large Delta tables appropriately
+Incremental processing
 
-Control small-file generation
+Appropriate Delta partitioning
 
-Keep processing incremental
+Small-file management
 
-Optimize file layout
+File-layout optimization
 
 Spark
-Partition data for parallel execution
+Parallel partitioning
 
-Optimize joins and MERGE operations
+Optimized joins
 
-Avoid unnecessary full-table scans
+Efficient MERGE operations
 
-Tune compute/resource sizing
+Avoidance of unnecessary full-table scans
+
+Appropriate compute sizing
 
 Delta
-Monitor file sizes and table statistics
+Monitor file sizes and statistics
 
 Optimize MERGE keys
 
-Use appropriate maintenance/optimization strategies
+Apply appropriate table-maintenance strategies
 
 Serving
-Keep Gold tables narrow and analytical
+Keep Gold tables narrow
 
-Consider pre-aggregations where appropriate
+Use pre-aggregations where appropriate
 
 Monitor DirectQuery concurrency
 
@@ -612,35 +736,39 @@ compute requirements and concurrent analytical access.
 
 🧪 Demonstration Scenarios
 1️⃣ Batch 1 --- Baseline
-Copy          ✓
-Bronze        ✓
-Silver        ✓
-Gold          ✓
-Power BI      ✓
+Copy       ✓
+Bronze     ✓
+Silver     ✓
+Gold       ✓
+Power BI   ✓
 2️⃣ Batch 2 --- Incremental + Corrections
 New Row IDs
-   → INSERT
+    → INSERT
 
 Existing Row IDs
-   → UPDATE
+    → UPDATE
 
 Duplicate current-state records
-   → None
+    → NONE
 3️⃣ Batch 3 --- Validation Failure
-Copy                         ✓
-Bronze                       ✓
-Silver validation            ✗
-Rejected records             ✓
-Processing log               ✓
-Failure notification         ✓
-Gold transformation          Not executed
-Reporting layer              Unchanged
+Copy                       ✓
+Bronze                     ✓
+Silver validation          ✗
+Rejected records           ✓
+Processing log             ✓
+Failure notification       ✓
+Gold transformation       NOT EXECUTED
+Reporting layer            UNCHANGED
 4️⃣ Batch 2 --- Idempotent Rerun
-Rerunning Batch 2 should leave the current-state business-key count
-unchanged and should not create duplicate row_id values.
+The same batch is processed again.
 
-🔎 Example Validation Queries
-Current row count and key uniqueness
+Expected result:
+
+No duplicate current-state Row IDs
+No unintended row-count increase
+Same current-state business results
+🔎 Useful Validation Queries
+Current row count and business-key uniqueness
 SELECT
     COUNT(*) AS row_count,
     COUNT(DISTINCT row_id) AS distinct_row_ids
@@ -662,7 +790,7 @@ SELECT TOP 20 *
 FROM silver_processing_log
 ORDER BY processing_end_time DESC;
 📸 Evidence
-The repository can contain screenshots demonstrating:
+The project evidence includes screenshots for:
 
 Master pipeline dependencies
 
@@ -674,16 +802,17 @@ Batch 3 rejected records
 
 Failure notification
 
-Gold/reporting state unchanged after Batch 3
+Gold/reporting layer unchanged after Batch 3
 
 Power BI regional RLS
 
 Direct SQL regional RLS
 
 🚀 Reproduction
-The solution was developed in a Microsoft Fabric workspace.
-Authentication details and private connection configuration are
-intentionally excluded from the public repository.
+The implementation was developed in a Microsoft Fabric workspace.
+
+Private authentication and connection configuration are intentionally
+excluded from the public repository.
 
 High-level setup:
 
@@ -700,35 +829,69 @@ High-level setup:
 11. Connect Power BI to the secured SQL Analytics Endpoint
 12. Run the demonstration batches
 13. Validate success, failure and idempotency scenarios
+🔒 Public Repository Security Checklist
+Before publishing, verify:
 
+No passwords
 
+No API keys
 
+No access tokens
 
+No client secrets
+
+No private connection strings
+
+No workspace credentials
+
+No customer PII
+
+No personal authentication details
+
+No private assessment credentials
+
+Use placeholders for sensitive configuration.
 
 🤖 AI Disclosure
 AI-assisted development and online technical references were used during
 development for:
 
-understanding Microsoft Fabric concepts
+Understanding Microsoft Fabric concepts
 
-exploring implementation approaches
+Exploring implementation approaches
 
-debugging and explaining code
+Debugging and explaining code
 
-reviewing architecture and trade-offs
+Reviewing architecture and trade-offs
 
-improving documentation
+Improving documentation
 
+The final implementation was reviewed and tested against the assessment
+requirements, with the goal of keeping the architecture and
+implementation explainable and defensible during technical discussion.
 
+📚 Documentation
+Additional project documentation includes:
 
+Architecture & Design Decisions --- detailed architecture,
+trade-offs, business key, validation, security and scaling.
 
+One-Page Architecture Summary --- concise assessment-focused
+design overview.
+
+Implementation Notebooks --- Bronze, Silver and Gold processing.
+
+Power BI Report --- analytical reporting.
+
+Screenshots / Demo Evidence --- successful, failed and security
+scenarios.
 
 👨‍💻 Author
 Thiwanka Madhusanka
 
 BSc (Hons) Information Technology --- Data Science
 
-Areas of interest:
+Areas of interest
 
 Data Engineering · Data Analytics · Data Warehousing ·
 Microsoft Fabric · SQL · Python · Power BI
@@ -753,7 +916,8 @@ Microsoft Fabric · SQL · Python · Power BI
 ✓ SQL data-layer RLS
 ✓ Power BI regional analytics
 ✓ 100M rows/day scaling considerations
-End-to-end Microsoft Fabric data engineering solution designed
-around reliability, data quality, security, and analytical
-usability.
+<p align="center">
+<strong>{=html}Microsoft Fabric • Data Engineering • Data Quality •
+Security • Analytics</strong>{=html}
 
+</p>
